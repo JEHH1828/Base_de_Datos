@@ -46,6 +46,7 @@ class Pila{
     void push(int v);
     int  pop(void);
     void MostrarIndicePar(void);
+	void MostrarContenidoPar(void);
     int  tamanio(void);
 	void Verpila(void);
 };
@@ -116,7 +117,7 @@ void Pila::MostrarIndicePar(void)
 }
 */
 /*
-este es el caso 5
+este es el caso 5*/
 void Pila::MostrarContenidoPar(void)
 { Nodo *Aux=tope;
    while(Aux){
@@ -124,7 +125,7 @@ void Pila::MostrarContenidoPar(void)
 	cout<<"\n "<<Aux->dameTuDato();
 	Aux=Aux->dameTuSiguiente();
 	   }		
-}*/
+}
 
 
 /********************************************************************************/
@@ -139,6 +140,7 @@ int main(void)
   	 	 cout<<"\n3) Ver toda la pila"<<endl;
 		 cout<<"\n4) Tamaño de la pila"<<endl;
 		 cout<<"\n5) Nodos con contenido par "<<endl;
+		 cout<<"\n6) Nodos con contenido par "<<endl;
   	 	 cout<<"\n0) PARA SALIR DEL MENU "<<endl;
   	 	 cout<<"\n\nElige una opcion: " ;
   	 	 cin>>opc;
@@ -168,7 +170,11 @@ int main(void)
 			 cout <<"\n Hay "<< Pilita.tamanio()<<" nodos en la pila";
 				   break;
 			case 5:
-			 cout<<"\n5) Nodos con contenido par"<<endl;
+			 cout<<"\n5) Tamanio de la pila"<<endl;
+			 Pilita.MostrarContenidoPar();
+				   break;
+			case 6:
+			 cout<<"\n6) Nodos con contenido par"<<endl;
 			 Pilita.MostrarIndicePar();
 				   break;
   	 	 	default: cout<<"\nNo existe esa opcion!! "<<endl;
