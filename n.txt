@@ -1,0 +1,5 @@
+Nodo *Aux=tope;
+	while(Aux){
+		
+		Aux=Aux-> dameTuSiguiente();
+	}

@@ -2,14 +2,23 @@
     "tasks": [
         {
             "type": "cppbuild",
+<<<<<<< HEAD
             "label": "C/C++: g++.exe compilar archivo activo",
             "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe",
+=======
+            "label": "C/C++: g++ compilar archivo activo",
+            "command": "/usr/bin/g++",
+>>>>>>> 6bc8f5f08d87572cd6172c3725219f4e719541f1
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
+<<<<<<< HEAD
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
+=======
+                "${fileDirname}/${fileBasenameNoExtension}"
+>>>>>>> 6bc8f5f08d87572cd6172c3725219f4e719541f1
             ],
             "options": {
                 "cwd": "${fileDirname}"
