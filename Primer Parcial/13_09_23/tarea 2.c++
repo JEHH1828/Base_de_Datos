@@ -153,11 +153,7 @@ int main(void)
   	 	 cout<<"\n3) Ver toda la pila"<<endl;
 		 cout<<"\n4) Tamaño de la pila"<<endl;
 		 cout<<"\n5) Nodos con contenido par "<<endl;
-<<<<<<< HEAD
-		 cout<<"\n6) Contar nodo par "<<endl;
-=======
 		 cout<<"\n6) Nodos con contenido par "<<endl;
->>>>>>> 69cf666cc3607abfa331034e3f498a827e1a214d
   	 	 cout<<"\n0) PARA SALIR DEL MENU "<<endl;
   	 	 cout<<"\n\nElige una opcion: " ;
   	 	 cin>>opc;
