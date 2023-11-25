@@ -2,7 +2,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
-/* Descendente*/
+// llenar l1 de tamaño n con enteros, copiar l1 para llenar l2 sin repetir 
 using namespace std;
 class Nodo
 { private:
@@ -47,15 +47,16 @@ ListaSimple::ListaSimple()
 }
 void ListaSimple::Insertar(int d)
 {  Nodo* aux;
-   if(laListaSimpleEstaVacia() || Inicio->dameTuDato() < d)
+   if(laListaSimpleEstaVacia() || Inicio->dameTuDato() > d)
        Inicio = new Nodo(d, Inicio);
    else {
       aux = Inicio;
-      while(aux->dameTuSiguiente() && aux->dameTuSiguiente()->dameTuDato() >= d) 
+      while(aux->dameTuSiguiente() && aux->dameTuSiguiente()->dameTuDato() <= d) 
          aux = aux->dameTuSiguiente();
       aux->modificaTuSiguiente(new Nodo(d, aux->dameTuSiguiente()))  ;
    }
 }
+
 int ListaSimple::Eliminar(int d)
 {  int borra=0;
    Nodo *anterior, *aux;
@@ -63,7 +64,7 @@ int ListaSimple::Eliminar(int d)
    {
    	aux = Inicio;
    	anterior = NULL;
-   	while(aux && aux->dameTuDato() > d) {
+   	while(aux && aux->dameTuDato() < d) {
       anterior = aux; 
       aux = aux->dameTuSiguiente();
    	}
